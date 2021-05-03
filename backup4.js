@@ -39,7 +39,7 @@ function makeGrid(rows, cells) {
 }; 
 
 // When pixel is clicked by the user, call pixelFill()
-pixelCanvas.addEventListener("click", pixelFill);
+pixelCell.addEventListener("click", pixelFill);
 
 // Make pixel fill function
 function pixelFill(event) {
@@ -48,5 +48,5 @@ function pixelFill(event) {
     console.log("This event fires but it doesn't colour sh*t! " + colourPicker);
 };
 
-// Select pixel cell
+// Select pixel cell (won't allow because grid has not been generated)
 const pixelCell = document.querySelector("td");

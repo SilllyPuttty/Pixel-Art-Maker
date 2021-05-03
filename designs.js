@@ -1,5 +1,3 @@
-// Select color input
-const colourPicker = document.querySelector("#colorPicker");
 // Select pixel grid
 const pixelCanvas = document.querySelector("#pixelCanvas");
 // Select sumbit button
@@ -37,5 +35,7 @@ pixelCanvas.addEventListener("click", pixelFill);
 
 // Make pixel fill function
 function pixelFill(event) {
-    console.log("This event is firing."); + event.target.textContent; /* update style here */
+    let colourPicker = document.querySelector("#colorPicker").value;
+    console.log("This event fires but it doesn't colour sh*t! " + colourPicker);
+    event.target.style.backgroundColour = colourPicker;
 };

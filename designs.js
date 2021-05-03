@@ -7,10 +7,10 @@ const submitButton = document.querySelector("#sizePicker input[type=submit]")
 
 // When size is submitted by the user, call makeGrid()
 submitButton.addEventListener("click", function() {
-    alert("Hello, this is a test");
+    makeGrid();
 });
 
 // Make grid function (using comments for separation)
 function makeGrid() {
-
+    alert("Hello, this is a test");
 }; 

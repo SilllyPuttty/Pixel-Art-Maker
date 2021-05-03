@@ -12,5 +12,17 @@ submitButton.addEventListener("click", function() {
 
 // Make grid function (using comments for separation)
 function makeGrid() {
-    alert("Hello, this is a test");
+
+    // Loop creates "tr"
+    for (let x = 0; x < 10; x++) {
+        let row = document.createElement("tr");
+
+        // Loop creates "td"
+        for (let y = 0; y < 10; y++) {
+            let cell = document.createElement("td");
+            row.appendChild(cell);
+        }
+        // finally, add updated row to table element
+        pixelCanvas.appendChild(row);
+    }
 }; 

@@ -3,7 +3,8 @@
 // Select sumbit button
 const colourPicker = document.querySelector("#colorPicker");
 const pixelCanvas = document.querySelector("#pixelCanvas");
-const submitButton = document.querySelector("#sizePicker input[type=button]")
+const submitButton = document.querySelector("#sizePicker input[type=button]");
+
 
 // When size is submitted by the user, call makeGrid()
 submitButton.addEventListener("click", function() {
@@ -14,6 +15,8 @@ submitButton.addEventListener("click", function() {
 
 // Make grid function (using comments for separation)
 function makeGrid(rows, cells) {
+
+    // Removes previously generated grid (if one has been created)
     pixelCanvas.innerHTML = null
 
     // Loop creates "tr"
@@ -25,7 +28,20 @@ function makeGrid(rows, cells) {
             let cell = document.createElement("td");
             row.appendChild(cell);
         }
-        // finally, add updated row to table element
+        // Adds updated rows to table element
         pixelCanvas.appendChild(row);
+    }
+
+    // Once grid is generated, user can fill cells
+    const pixel = document.querySelector("#pixelCanvas");
+
+    // When pixel is clicked by the user, call pixelFill()
+    pixel.addEventListener("click", function() {
+        pixelFill();
+    });
+
+    // Make pixel fill function
+    function pixelFill() {
+        alert("Now you can fill this cell");
     }
 }; 

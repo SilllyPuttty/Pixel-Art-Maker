@@ -1,11 +1,3 @@
-/*
-- The problem I'm having is that I can't colour individual table cells.
-- I cannot get event to fire when pixelCell (pointed at 'td') is the target.
-- I can only get event to fire when 'pixelCanvas' is the target
-- This means I cannot colour individual cells.
-- Please help, any feedback would be much appreciated
-*/
-
 // Select pixel grid
 const pixelCanvas = document.querySelector("#pixelCanvas");
 // Select sumbit button
@@ -44,9 +36,6 @@ pixelCanvas.addEventListener("click", pixelFill);
 // Make pixel fill function
 function pixelFill(event) {
     let colourPicker = document.querySelector("#colorPicker").value;
-    event.target.style.backgroundColour = colourPicker;
-    console.log("This event fires but it doesn't colour sh*t! " + colourPicker);
+    event.target.style.backgroundColor = colourPicker;
 };
 
-// Select pixel cell
-const pixelCell = document.querySelector("td");

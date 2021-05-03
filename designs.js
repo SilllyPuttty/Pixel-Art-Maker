@@ -4,8 +4,6 @@
 const colourPicker = document.querySelector("#colorPicker");
 const pixelCanvas = document.querySelector("#pixelCanvas");
 const submitButton = document.querySelector("#sizePicker input[type=button]")
-//const rows = document.querySelector("#inputHeight").value;
-//const cells = document.querySelector("#inputWidth").value;
 
 // When size is submitted by the user, call makeGrid()
 submitButton.addEventListener("click", function() {

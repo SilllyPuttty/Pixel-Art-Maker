@@ -3,10 +3,11 @@
 // Select sumbit button
 const colourPicker = document.querySelector("#colorPicker");
 const pixelCanvas = document.querySelector("#pixelCanvas");
-const submitButton = document.querySelector("#sizePicker input[type=submit]")
+const submitButton = document.querySelector("#sizePicker input[type=button]")
 
 // When size is submitted by the user, call makeGrid()
 submitButton.addEventListener("click", function() {
+    // submitButton.preventDefault();
     makeGrid();
 });
 
